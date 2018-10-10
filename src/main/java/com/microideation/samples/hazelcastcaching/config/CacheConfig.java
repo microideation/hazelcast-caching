@@ -5,6 +5,7 @@ import com.hazelcast.client.config.ClientConfig;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.spring.cache.HazelcastCacheManager;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -23,6 +24,7 @@ public class CacheConfig {
      * Method to create the hazelcastCacheManager using the settings
      * @return : Return the HazelcastCacheManager with the details
      */
+    @Bean
     public HazelcastCacheManager hazelcastCacheManager() {
 
         // Create the cacheConfig
